@@ -1,0 +1,75 @@
+on folder lab5 in home dir
+1-
+compress -v file11 but isnot recognze for redhat now 
+gzip file11
+zip myfiles.zip file12 file13
+
+*decompress*
+gunzip file11
+unzip myfiles.zip
+
+*difference*
+-zip requires destintaion and create a new file.zip keeping the original file avalizble
+-gzip removes the original file and create a new file .gz with the same name 
+
+
+2-
+zcat for compress, gzip, gunzip
+
+bzcat for  bzc
+
+3-
+tar -cf etc.tar /etc
+
+4-
+find ~/ -type f -mtime -2 
+
+5-
+find /etc -user root
+
+6-
+find ~/ -type d
+
+7-
+sudo find / -type f -name ".profile" 2>>/dev/null
+
+8-
+ls -l /etc | grep -w passwd
+ls -l /dev/pts | grep -w 0
+ls -l /dev | grep -w sda
+ls -l / | grep -w etc
+
+9-
+sudo ls -d -i /etc
+sudo ls -d -i /etc/hosts
+sudo ls -d -i /
+
+10-
+cp /etc/passwd ~
+diff /etc/passwd ~/passwd
+cmp /etc/passwd ~/passwd
+
+after editing
+
+vi ~/passwd
+cmp /etc/passwd ~/passwd
+/etc/passwd /home/mibrahim/passwd differ: byte 1, line 1
+
+
+diff /etc/passwd ~/passwd
+1,2d0
+< root:x:0:0:root:/root:/bin/bash
+< bin:x:1:1:bin:/bin:/sbin/nologin
+
+
+
+
+
+
+
+
+
+
+
+
+
